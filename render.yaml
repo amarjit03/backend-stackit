@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: stackit-backend
+    env: python
+    buildCommand: pip install --no-build-isolation --no-cache-dir -r requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
